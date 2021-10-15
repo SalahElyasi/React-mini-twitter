@@ -1,21 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./Messages.css";
+import { Link } from "react-router-dom";
+import Message from "./Message";
 
-const Messages = () => {
-  const [users, setUsers] = useState([]);
-
-  useEffect(() => {
-    getUsers();
-  }, []);
-
-  async function getUsers() {
-    const response = await fetch(
-      "https://minitwitterbackend.herokuapp.com/messages"
-    );
-    const users = await response.json();
-    setUsers(users);
-  }
-
+const Messages = ({ datas }) => {
   return (
     <div className="m-container">
       <div className="header">
@@ -28,8 +16,10 @@ const Messages = () => {
       </div>
       <div className="main">
         <ul>
-          {users.map((user) => (
-            <li>{user._id}</li>
+          {datas.map((data) => (
+            <Link to={`/Messages/${data._id}`}>
+              <li>{data.text}</li>
+            </Link>
           ))}
         </ul>
       </div>
