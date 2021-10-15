@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Messages.css";
 
 const Users = ({ datas }) => {
   return (
@@ -15,7 +16,7 @@ const Users = ({ datas }) => {
       <div className="main">
         <ul>
           {datas.map((data) => (
-            <Link>
+            <Link className="user_data" to={`/Users/${data._id}`}>
               <li>{data.name}</li>
             </Link>
           ))}

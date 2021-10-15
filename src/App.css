@@ -27,11 +27,11 @@
   background: cornflowerblue;
 }
 .sidebar {
-  width: 30%;
+  width: 20%;
   background: darkgray;
   margin-right: 3px;
 }
 .messages {
-  width: 70%;
+  width: 80%;
   background: darkgray;
 }

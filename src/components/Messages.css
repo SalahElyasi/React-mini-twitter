@@ -15,7 +15,7 @@
   text-align: center;
 }
 .search-div {
-  width: 90%;
+  width: 85%;
   background: cornsilk;
 }
 .search-div p {
@@ -23,4 +23,16 @@
 }
 .main {
   font-size: 12px;
+  margin: 10px;
+}
+.articles {
+  list-style-type: none;
+  margin: 10px;
+  text-align: center;
+  padding: 5px;
+}
+.user_data {
+  list-style-type: none;
+  margin: 10px;
+  text-align: left;
 }

@@ -1,14 +1,13 @@
 import React from "react";
 import "./Messages.css";
 import { Link } from "react-router-dom";
-import Message from "./Message";
 
-const Messages = ({ datas }) => {
+const Messages = ({ datas, activeuser }) => {
   return (
     <div className="m-container">
       <div className="header">
         <div className="sidebar-btn">
-          <p>s</p>
+          {activeuser && <p>s{activeuser.name}</p>}
         </div>
         <div className="search-div">
           <p>Search</p>
@@ -17,8 +16,9 @@ const Messages = ({ datas }) => {
       <div className="main">
         <ul>
           {datas.map((data) => (
-            <Link to={`/Messages/${data._id}`}>
+            <Link className="articles" to={`/Messages/${data._id}`}>
               <li>{data.text}</li>
+              <hr />
             </Link>
           ))}
         </ul>

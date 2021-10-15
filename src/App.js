@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import Users from "./components/Users";
+import User from "./components/User";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
 
@@ -37,8 +38,8 @@ function App() {
     const response = await fetch("https://minitwitterbackend.herokuapp.com/me");
     const a_user = await response.json();
     setActiveUser(a_user);
-    console.log(activeuser);
   }
+  console.log(activeuser[0]);
 
   return (
     <div className="container">
@@ -53,6 +54,9 @@ function App() {
         </div>
         <div className="messages">
           <Switch>
+            <Route exact path="/Users/:id">
+              <User datas={users} />
+            </Route>
             <Route exact path="/Messages/:id">
               <Message datas={messages} />
             </Route>
@@ -63,10 +67,7 @@ function App() {
               <Users datas={users} />
             </Route>
             <Route exact path="/">
-              <Messages datas={messages} />
-            </Route>
-            <Route exact path="#">
-              <Messages datas={activeuser} />
+              <Messages datas={messages} activeuser={activeuser[0]} />
             </Route>
           </Switch>
         </div>
