@@ -2,13 +2,11 @@ import React from "react";
 import "./Messages.css";
 import { Link } from "react-router-dom";
 
-const Messages = ({ datas, activeuser }) => {
+const Messages = ({ datas }) => {
   return (
     <div className="m-container">
       <div className="header">
-        <div className="sidebar-btn">
-          {activeuser && <p>s{activeuser.name}</p>}
-        </div>
+        <div className="sidebar-btn"></div>
         <div className="search-div">
           <p>Search</p>
         </div>

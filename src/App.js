@@ -39,13 +39,12 @@ function App() {
     const a_user = await response.json();
     setActiveUser(a_user);
   }
-  console.log(activeuser[0]);
 
   return (
     <div className="container">
       <div className="row1">
         <div className="navbar">
-          <Navbar />
+          <Navbar activeuser={activeuser[0]} />
         </div>
       </div>
       <div className="row2">
@@ -67,7 +66,7 @@ function App() {
               <Users datas={users} />
             </Route>
             <Route exact path="/">
-              <Messages datas={messages} activeuser={activeuser[0]} />
+              <Messages datas={messages} />
             </Route>
           </Switch>
         </div>
