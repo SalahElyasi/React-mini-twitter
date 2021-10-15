@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.logo {
+  width: 20%;
+  height: 100%;
+  background: darkgreen;
+  margin: 20px 2px 20px 10px;
+}
+.active-user {
+  width: 50%;
+  height: 100%;
+  background: darkgrey;
+  margin: 2px;
+}
+.left {
+  width: 30%;
+  height: 100%;
+}
+.btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
