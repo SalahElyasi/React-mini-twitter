@@ -18,7 +18,8 @@ const Navbar = ({ activeuser }) => {
           </h2>
         </div>
         <div className="active-user">
-          <h4>User:&nbsp;&nbsp; </h4> {activeuser && <p>{activeuser.name}</p>}
+          <h4>Active User:&nbsp;&nbsp; </h4>{" "}
+          {activeuser && <p>{activeuser.name}</p>}
           {/* E_Mail:
           {activeuser && <p>{activeuser.email}</p>} */}
         </div>
