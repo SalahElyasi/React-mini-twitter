@@ -71,6 +71,7 @@ function App() {
           </Switch>
         </div>
       </div>
+
       <div className="row3">
         <Footer className="footer" />
       </div>

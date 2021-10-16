@@ -8,6 +8,8 @@
   padding: 2px;
   display: flex;
   flex-direction: column;
+  width: 1000px;
+  margin-left: 10%;
 }
 .row1 {
   width: 100%;
@@ -30,8 +32,24 @@
   width: 20%;
   background: darkgray;
   margin-right: 3px;
+  margin-top: 80px;
 }
 .messages {
   width: 80%;
-  background: darkgray;
+  background: rgb(216, 212, 212);
+}
+
+.ul li {
+  text-decoration: none;
+}
+.lit {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20%;
+  margin-bottom: 2%;
+  width: 400px;
+  border: 1px solid black;
+}
+.name {
+  margin-left: 10%;
 }
