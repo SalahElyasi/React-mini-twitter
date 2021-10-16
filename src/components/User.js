@@ -20,17 +20,28 @@ const User = ({ datas }) => {
 
   return (
     <div>
-      <h3>User view:</h3>
-      <div>{data.name}</div>
-      <div>{data.id}</div>
-      <div>{data.email}</div>
-      <div>
-        <h3>User's Messages:</h3>
-        <ul>
-          {userMes &&
-            userMes.map((message) => <li key={message._id}>{message.text}</li>)}
-        </ul>
-      </div>
+      {data && (
+        <>
+          <div>
+            <h3>User view:</h3>
+            <br />
+            <div>{data.name}</div>
+            <div>{data._id}</div>
+            <div>{data.email}</div>
+          </div>
+          <br />
+          <div>
+            <h3>User's Messages:</h3>
+            <br />
+            <div>
+              {userMes &&
+                userMes.map((message) => (
+                  <ul key={message._id}>{message.text}</ul>
+                ))}
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 };

@@ -5,9 +5,12 @@ const Message = ({ datas }) => {
   const data = datas.find((e) => e._id === id);
   return (
     <div>
-      Message:
+      <h3>Message:</h3>
+      <br />
       <div>{data.text}</div>
-      Author:
+      <br />
+      <h3>Author:</h3>
+      <br />
       <div>{data.userId.name}</div>
     </div>
   );

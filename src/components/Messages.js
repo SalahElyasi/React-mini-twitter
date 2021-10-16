@@ -8,15 +8,15 @@ const Messages = ({ datas }) => {
       <div className="header">
         <div className="sidebar-btn"></div>
         <div className="search-div">
-          <p>Search</p>
+          <p>Search:</p>
         </div>
       </div>
       <div className="main">
         <ul>
           {datas.map((data) => (
             <Link className="articles" to={`/Messages/${data._id}`}>
-              <li>{data.text}</li>
-              <hr />
+              <li className="lit">{data.text}</li>
+              {/* <hr /> */}
             </Link>
           ))}
         </ul>
